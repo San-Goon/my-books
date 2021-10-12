@@ -4,7 +4,6 @@ import { AnyAction, Reducer } from "redux";
 export type LoginReqType = {
   email: string;
   password: string;
-  token: string | null;
 };
 
 export interface AuthState {
@@ -30,5 +29,12 @@ export interface BookType {
   title: string;
   author: string;
   createdAt: string;
+  url: string;
+}
+
+export interface BookReqType {
+  title: string;
+  message: string;
+  author: string;
   url: string;
 }

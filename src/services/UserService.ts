@@ -4,7 +4,9 @@ import { LoginReqType } from "../types";
 const USER_API_URL = "https://api.marktube.tv/v1/me";
 
 export default class UserService {
-  public static async login(reqData: LoginReqType): Promise<string | null> {
+  public static async login(
+    reqData: LoginReqType | any
+  ): Promise<string | null> {
     const response = await axios.post(USER_API_URL, reqData);
     return response.data.token;
   }

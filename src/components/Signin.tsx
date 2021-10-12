@@ -64,8 +64,7 @@ const Signin: React.FC<SigninProps> = ({ login }) => {
   function click() {
     const email = emailRef.current!.state.value;
     const password = passwordRef.current!.state.value;
-    const token = null;
-    login({ email, password, token });
+    login({ email, password });
   }
 };
 
